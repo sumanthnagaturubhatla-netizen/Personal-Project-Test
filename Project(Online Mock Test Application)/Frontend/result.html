@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Result</title>
+
+    <style>
+
+        body {
+
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .result-card {
+
+            background: white;
+            width: 450px;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        h1 {
+
+            color: #2c3e50;
+            margin-bottom: 25px;
+        }
+
+        .score-box {
+
+            background: #ecf0f1;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .total {
+
+            background: #27ae60;
+            color: white;
+            font-size: 24px;
+        }
+
+        .status {
+
+            margin-top: 25px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .pass {
+
+            color: green;
+        }
+
+        .fail {
+
+            color: red;
+        }
+
+        .btn {
+
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+
+            background: #1a252f;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="result-card">
+
+        <h1>Student Result</h1>
+
+        <div class="score-box" id="test1Score">
+            Loading Test 1 Score...
+        </div>
+
+        <div class="score-box" id="test2Score">
+            Loading Test 2 Score...
+        </div>
+
+        <div class="score-box total" id="totalScore">
+            Loading Total Score...
+        </div>
+
+        <div class="status" id="resultStatus">
+        </div>
+
+        <button class="btn" onclick="logout()">
+            Logout
+        </button>
+
+    </div>
+
+<script>
+
+    // Get scores from localStorage
+
+    let test1 = localStorage.getItem("test1_score");
+
+    let test2 = localStorage.getItem("test2_score");
+
+    // If scores are empty set 0
+
+    if(test1 == null){
+
+        test1 = 0;
+    }
+
+    if(test2 == null){
+
+        test2 = 0;
+    }
+
+    // Convert to number
+
+    test1 = Number(test1);
+
+    test2 = Number(test2);
+
+    // Calculate total
+
+    let total = test1 + test2;
+
+    // Display scores
+
+    document.getElementById("test1Score").innerHTML =
+    "Final Test Part-1 Score : " + test1 + " / 8";
+
+    document.getElementById("test2Score").innerHTML =
+    "Final Test Part-2 Score : " + test2 + " / 8";
+
+    document.getElementById("totalScore").innerHTML =
+    "Total Score : " + total + " / 16";
+
+    // Pass or Fail
+
+    if(total >= 8){
+
+        document.getElementById("resultStatus").innerHTML =
+        "Result : PASS";
+
+        document.getElementById("resultStatus").classList.add("pass");
+    }
+
+    else{
+
+        document.getElementById("resultStatus").innerHTML =
+        "Result : FAIL";
+
+        document.getElementById("resultStatus").classList.add("fail");
+    }
+
+    // Logout function
+
+    function logout(){
+
+        localStorage.clear();
+
+        alert("Logged Out Successfully");
+
+        window.location.href = "login.html";
+    }
+
+</script>
+
+</body>
+
+</html>
