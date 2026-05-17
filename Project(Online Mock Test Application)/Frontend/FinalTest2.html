@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Final Test Part-2</title>
+
+    <style>
+
+        body{
+            margin:0;
+            font-family:Arial, Helvetica, sans-serif;
+            background:linear-gradient(135deg,#74ebd5,#9face6);
+            color:#2c3e50;
+        }
+
+        .container{
+            max-width:1000px;
+            margin:30px auto;
+            padding:20px;
+        }
+
+        .test-card{
+            background:white;
+            padding:30px 40px;
+            border-radius:18px;
+            box-shadow:0 15px 35px rgba(0,0,0,0.25);
+        }
+
+        .title{
+            text-align:center;
+            font-size:36px;
+            margin-bottom:20px;
+        }
+
+        h1{
+            font-size:26px;
+            margin-top:30px;
+            border-bottom:2px solid #ecf0f1;
+            padding-bottom:6px;
+        }
+
+        .question{
+            margin-top:20px;
+            font-size:17px;
+        }
+
+        .options{
+            margin-top:10px;
+            margin-left:20px;
+        }
+
+        .options label{
+            display:block;
+            margin-bottom:8px;
+            cursor:pointer;
+        }
+
+        input[type="radio"]{
+            margin-right:8px;
+        }
+
+        .buttons{
+            margin-top:30px;
+            text-align:center;
+        }
+
+        input[type="submit"],
+        input[type="reset"]{
+
+            padding:10px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:6px;
+            cursor:pointer;
+            margin:0 10px;
+        }
+
+        input[type="submit"]{
+            background:#27ae60;
+            color:white;
+        }
+
+        input[type="submit"]:hover{
+            background:#219150;
+        }
+
+        input[type="reset"]{
+            background:#e74c3c;
+            color:white;
+        }
+
+        input[type="reset"]:hover{
+            background:#c0392b;
+        }
+
+        .message{
+            display:none;
+            padding:10px;
+            margin-bottom:15px;
+            border-radius:5px;
+            text-align:center;
+            font-weight:bold;
+        }
+
+        .success{
+            background:#d4edda;
+            color:#155724;
+        }
+
+        .error{
+            background:#f8d7da;
+            color:#721c24;
+        }
+
+        .loading{
+            display:none;
+            text-align:center;
+            font-weight:bold;
+            margin-top:20px;
+        }
+
+        @media(max-width:768px){
+
+            .test-card{
+                padding:20px;
+            }
+
+            .title{
+                font-size:28px;
+            }
+
+            h1{
+                font-size:22px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="test-card">
+
+        <div id="message" class="message"></div>
+
+        <div class="title">
+            <u>Final Test Part-2</u>
+        </div>
+
+        <form id="testForm">
+
+            <h1>English (4 Marks)</h1>
+
+            <div class="question">
+                1. Choose the word most similar to <b>CANDID</b>
+            </div>
+
+            <div class="options">
+
+                <label><input type="radio" name="q1" value="Secretive">Secretive</label>
+                <label><input type="radio" name="q1" value="Dishonest">Dishonest</label>
+                <label><input type="radio" name="q1" value="Frank">Frank</label>
+                <label><input type="radio" name="q1" value="Vague">Vague</label>
+
+            </div>
+
+            <div class="question">
+                2. Opposite meaning of <b>FRUGAL</b>
+            </div>
+
+            <div class="options">
+
+                <label><input type="radio" name="q2" value="Thrifty">Thrifty</label>
+                <label><input type="radio" name="q2" value="Extravagant">Extravagant</label>
+                <label><input type="radio" name="q2" value="Economical">Economical</label>
+                <label><input type="radio" name="q2" value="Miserly">Miserly</label>
+
+            </div>
+
+            <div class="question">
+                3. Best synonym for <b>Meticulous</b>
+            </div>
+
+            <div class="options">
+
+                <label><input type="radio" name="q3" value="Careless">Careless</label>
+                <label><input type="radio" name="q3" value="Thorough">Thorough</label>
+                <label><input type="radio" name="q3" value="Hasty">Hasty</label>
+                <label><input type="radio" name="q3" value="Random">Random</label>
+
+            </div>
+
+            <div class="question">
+                4. Best antonym for <b>Plausible</b>
+            </div>
+
+            <div class="options">
+
+                <label><input type="radio" name="q4" value="Believable">Believable</label>
+                <label><input type="radio" name="q4" value="Likely">Likely</label>
+                <label><input type="radio" name="q4" value="Unlikely">Unlikely</label>
+                <label><input type="radio" name="q4" value="Reasonable">Reasonable</label>
+
+            </div>
+
+            <h1>Computer Terminologies (4 Marks)</h1>
+
+            <div class="question">
+                5. Stack data structure follows which principle?
+            </div>
+
+            <div class="options">
+
+                <label><input type="radio" name="q5" value="FIFO">FIFO</label>
+                <label><input type="radio" name="q5" value="LILO">LILO</label>
+                <label><input type="radio" name="q5" value="LIFO">LIFO</label>
+                <label><input type="radio" name="q5" value="Random Access">Random Access</label>
+
+            </div>
+
+            <div class="question">
+                6. For the condition <b>if(A && B)</b>, what must be true?
+            </div>
+
+            <div class="options">
+
+                <label><input type="radio" name="q6" value="Only A is true">Only A is true</label>
+                <label><input type="radio" name="q6" value="Either A or B is true">Either A or B is true</label>
+                <label><input type="radio" name="q6" value="Both A and B are true">Both A and B are true</label>
+                <label><input type="radio" name="q6" value="Neither A nor B">Neither A nor B</label>
+
+            </div>
+
+            <div class="question">
+                7. How many times will "Hello" print from 1 to 5?
+            </div>
+
+            <div class="options">
+
+                <label><input type="radio" name="q7" value="4">4</label>
+                <label><input type="radio" name="q7" value="5">5</label>
+                <label><input type="radio" name="q7" value="6">6</label>
+                <label><input type="radio" name="q7" value="Infinite">Infinite</label>
+
+            </div>
+
+            <div class="question">
+                8. Difference between Syntax Error and Runtime Error?
+            </div>
+
+            <div class="options">
+
+                <label>
+                    <input type="radio" name="q8" value="Syntax occurs while running">
+                    Syntax occurs while running
+                </label>
+
+                <label>
+                    <input type="radio" name="q8" value="Syntax = grammar mistake, Runtime = during execution">
+                    Syntax = grammar mistake, Runtime = during execution
+                </label>
+
+                <label>
+                    <input type="radio" name="q8" value="They are the same">
+                    They are the same
+                </label>
+
+                <label>
+                    <input type="radio" name="q8" value="Syntax only in Python">
+                    Syntax only in Python
+                </label>
+
+            </div>
+
+            <div class="loading" id="loading">
+                Submitting Exam...
+            </div>
+
+            <div class="buttons">
+
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+
+document.getElementById("testForm").addEventListener("submit", async function(event){
+
+    event.preventDefault();
+
+    for(let i=1; i<=8; i++){
+
+        let checked = document.querySelector(`input[name="q${i}"]:checked`);
+
+        if(!checked){
+
+            showMessage("Please answer Question " + i, "error");
+            return;
+        }
+    }
+
+    let confirmSubmit = confirm("Are you sure you want to submit the exam?");
+
+    if(!confirmSubmit){
+
+        return;
+    }
+
+    document.getElementById("loading").style.display = "block";
+
+    const email = localStorage.getItem("email");
+
+    try{
+
+        const response = await fetch("http://127.0.0.1:5000/submit_test2",{
+
+            method:"POST",
+
+            headers:{
+                "Content-Type":"application/json"
+            },
+
+            body:JSON.stringify({
+
+                email: email,
+
+                q1: document.querySelector('input[name="q1"]:checked').value,
+                q2: document.querySelector('input[name="q2"]:checked').value,
+                q3: document.querySelector('input[name="q3"]:checked').value,
+                q4: document.querySelector('input[name="q4"]:checked').value,
+                q5: document.querySelector('input[name="q5"]:checked').value,
+                q6: document.querySelector('input[name="q6"]:checked').value,
+                q7: document.querySelector('input[name="q7"]:checked').value,
+                q8: document.querySelector('input[name="q8"]:checked').value
+
+            })
+        });
+
+        const data = await response.json();
+
+        document.getElementById("loading").style.display = "none";
+
+        if(data.success){
+
+            showMessage("Final Test Part-2 Submitted Successfully", "success");
+
+            alert("Exam Submitted Successfully!\nResult has been sent to your Email.");
+
+            document.getElementById("testForm").reset();
+        }
+
+        else{
+
+            showMessage(data.message, "error");
+        }
+
+    }
+
+    catch(error){
+
+        document.getElementById("loading").style.display = "none";
+
+        showMessage("Server Error", "error");
+
+        console.log(error);
+    }
+
+});
+
+function showMessage(message, type){
+
+    const messageDiv = document.getElementById("message");
+
+    messageDiv.innerHTML = message;
+
+    messageDiv.className = `message ${type}`;
+
+    messageDiv.style.display = "block";
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Final Test Part-1</title>
+
+    <style>
+
+        body{
+            margin:0;
+            font-family:Arial, Helvetica, sans-serif;
+            background:linear-gradient(135deg,#74ebd5,#9face6);
+            color:#2c3e50;
+        }
+
+        .container{
+            max-width:1000px;
+            margin:30px auto;
+            padding:20px;
+        }
+
+        .test-card{
+            background:white;
+            padding:30px 40px;
+            border-radius:18px;
+            box-shadow:0 15px 35px rgba(0,0,0,0.25);
+        }
+
+        .title{
+            text-align:center;
+            font-size:36px;
+            margin-bottom:20px;
+        }
+
+        h1{
+            font-size:26px;
+            margin-top:30px;
+            border-bottom:2px solid #ecf0f1;
+            padding-bottom:6px;
+        }
+
+        .question{
+            margin-top:20px;
+            font-size:17px;
+        }
+
+        .options{
+            margin-top:10px;
+            margin-left:20px;
+        }
+
+        .options label{
+            display:block;
+            margin-bottom:8px;
+            cursor:pointer;
+        }
+
+        input[type="radio"]{
+            margin-right:8px;
+        }
+
+        .buttons{
+            margin-top:30px;
+            text-align:center;
+        }
+
+        input[type="submit"],
+        input[type="reset"]{
+
+            padding:10px 25px;
+            font-size:16px;
+            border:none;
+            border-radius:6px;
+            cursor:pointer;
+            margin:0 10px;
+        }
+
+        input[type="submit"]{
+            background:#27ae60;
+            color:white;
+        }
+
+        input[type="submit"]:hover{
+            background:#219150;
+        }
+
+        input[type="reset"]{
+            background:#e74c3c;
+            color:white;
+        }
+
+        input[type="reset"]:hover{
+            background:#c0392b;
+        }
+
+        .message{
+            display:none;
+            padding:10px;
+            margin-bottom:15px;
+            border-radius:5px;
+            text-align:center;
+            font-weight:bold;
+        }
+
+        .success{
+            background:#d4edda;
+            color:#155724;
+        }
+
+        .error{
+            background:#f8d7da;
+            color:#721c24;
+        }
+
+        .loading{
+            display:none;
+            text-align:center;
+            font-weight:bold;
+            margin-top:20px;
+        }
+
+        @media(max-width:768px){
+
+            .test-card{
+                padding:20px;
+            }
+
+            .title{
+                font-size:28px;
+            }
+
+            h1{
+                font-size:22px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="test-card">
+
+        <div id="message" class="message"></div>
+
+        <div class="title">
+            <u>Final Test Part-1</u>
+        </div>
+
+        <form id="testForm">
+
+            <h1>Arithmetic (4 Marks)</h1>
+
+            <!-- Question 1 -->
+
+            <div class="question">
+                1. A vintage comic book was purchased for $120 and sold for $150.
+                What was the percentage profit?
+            </div>
+
+            <div class="options">
+
+                <label><input type="radio" name="q1" value="25%">25%</label>
+                <label><input type="radio" name="q1" value="30%">30%</label>
+                <label><input type="radio" name="q1" value="15%">15%</label>
+                <label><input type="radio" name="q1" value="20%">20%</label>
+
+            </div>
+
+            <!-- Question 2 -->
+
+            <div class="question">
+                2. Ratio of apples to oranges is 5:3.
+                If oranges are 24, total fruits?
+            </div>
+
+            <div class="options">
+
+                <label><input type="radio" name="q2" value="40">40</label>
+                <label><input type="radio" name="q2" value="56">56</label>
+                <label><input type="radio" name="q2" value="64">64</label>
+                <label><input type="radio" name="q2" value="48">48</label>
+
+            </div>
+
+            <!-- Question 3 -->
+
+            <div class="question">
+                3. Deposit $2000 at 4% simple interest for 3 years.
+                Total amount?
+            </div>
+
+            <div class="options">
+
+                <label><input type="radio" name="q3" value="$240">$240</label>
+                <label><input type="radio" name="q3" value="$2,240">$2,240</label>
+                <label><input type="radio" name="q3" value="$2,249.73">$2,249.73</label>
+                <label><input type="radio" name="q3" value="$2,080">$2,080</label>
+
+            </div>
+
+            <!-- Question 4 -->
+
+            <div class="question">
+                4. Scores are 82, 90, 75, 88.
+                Required fifth score to average 85?
+            </div>
+
+            <div class="options">
+
+                <label><input type="radio" name="q4" value="92">92</label>
+                <label><input type="radio" name="q4" value="85">85</label>
+                <label><input type="radio" name="q4" value="90">90</label>
+                <label><input type="radio" name="q4" value="88">88</label>
+
+            </div>
+
+            <h1>Reasoning (4 Marks)</h1>
+
+            <!-- Question 5 -->
+
+            <div class="question">
+                5. "I have no siblings, but that man's father is my father's son."
+                Who is in the photograph?
+            </div>
+
+            <div class="options">
+
+                <label><input type="radio" name="q5" value="His father">His father</label>
+                <label><input type="radio" name="q5" value="His son">His son</label>
+                <label><input type="radio" name="q5" value="Himself">Himself</label>
+                <label><input type="radio" name="q5" value="His nephew">His nephew</label>
+
+            </div>
+
+            <!-- Question 6 -->
+
+            <div class="question">
+                6. CLASH : CONFLICT :: LULL : _______
+            </div>
+
+            <div class="options">
+
+                <label><input type="radio" name="q6" value="Noise">Noise</label>
+                <label><input type="radio" name="q6" value="Storm">Storm</label>
+                <label><input type="radio" name="q6" value="Quiet">Quiet</label>
+                <label><input type="radio" name="q6" value="Fight">Fight</label>
+
+            </div>
+
+            <!-- Question 7 -->
+
+            <div class="question">
+                7. Walk North, left, left, right.
+                Which direction now?
+            </div>
+
+            <div class="options">
+
+                <label><input type="radio" name="q7" value="North">North</label>
+                <label><input type="radio" name="q7" value="South">South</label>
+                <label><input type="radio" name="q7" value="East">East</label>
+                <label><input type="radio" name="q7" value="West">West</label>
+
+            </div>
+
+            <!-- Question 8 -->
+
+            <div class="question">
+                8. Series: 7, 10, 8, 11, 9, 12, ?
+            </div>
+
+            <div class="options">
+
+                <label><input type="radio" name="q8" value="7">7</label>
+                <label><input type="radio" name="q8" value="10">10</label>
+                <label><input type="radio" name="q8" value="13">13</label>
+                <label><input type="radio" name="q8" value="15">15</label>
+
+            </div>
+
+            <div class="loading" id="loading">
+                Submitting Exam...
+            </div>
+
+            <div class="buttons">
+
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+
+document.getElementById("testForm").addEventListener("submit", async function(event){
+
+    event.preventDefault();
+
+    // Validate all questions answered
+
+    for(let i=1; i<=8; i++){
+
+        let checked = document.querySelector(`input[name="q${i}"]:checked`);
+
+        if(!checked){
+
+            showMessage("Please answer Question " + i, "error");
+            return;
+        }
+    }
+
+    let confirmSubmit = confirm("Are you sure you want to submit the exam?");
+
+    if(!confirmSubmit){
+
+        return;
+    }
+
+    document.getElementById("loading").style.display = "block";
+
+    const email = localStorage.getItem("email");
+
+    try{
+
+        const response = await fetch("http://127.0.0.1:5000/submit_test1",{
+
+            method:"POST",
+
+            headers:{
+                "Content-Type":"application/json"
+            },
+
+            body:JSON.stringify({
+
+                email: email,
+
+                q1: document.querySelector('input[name="q1"]:checked').value,
+                q2: document.querySelector('input[name="q2"]:checked').value,
+                q3: document.querySelector('input[name="q3"]:checked').value,
+                q4: document.querySelector('input[name="q4"]:checked').value,
+                q5: document.querySelector('input[name="q5"]:checked').value,
+                q6: document.querySelector('input[name="q6"]:checked').value,
+                q7: document.querySelector('input[name="q7"]:checked').value,
+                q8: document.querySelector('input[name="q8"]:checked').value
+
+            })
+        });
+
+        const data = await response.json();
+
+        document.getElementById("loading").style.display = "none";
+
+        if(data.success){
+
+            showMessage("Final Test Part-1 Submitted Successfully", "success");
+
+            alert("Exam Submitted Successfully!");
+
+            window.location.href = "FinalTest2.html";
+        }
+
+        else{
+
+            showMessage(data.message, "error");
+        }
+
+    }
+
+    catch(error){
+
+        document.getElementById("loading").style.display = "none";
+
+        showMessage("Server Error", "error");
+
+        console.log(error);
+    }
+
+});
+
+function showMessage(message, type){
+
+    const messageDiv = document.getElementById("message");
+
+    messageDiv.innerHTML = message;
+
+    messageDiv.className = `message ${type}`;
+
+    messageDiv.style.display = "block";
+}
+
+</script>
+
+</body>
+</html>
